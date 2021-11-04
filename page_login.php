@@ -1,6 +1,10 @@
 <?php
 session_start();
 include_once 'functions.php';
+//print_r($_SESSION);
+if (!not_authorize()) {
+    redirect_to("index.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
